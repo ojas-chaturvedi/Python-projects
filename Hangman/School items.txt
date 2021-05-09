@@ -1,0 +1,20 @@
+paper
+pencil
+pen
+laptop
+computer
+whiteboard
+marker
+eraser
+lunchbox
+bottle
+backpack
+notebooks
+textbooks
+sharpeners
+desks
+chairs
+scissor
+schedule
+pencil box
+crayons

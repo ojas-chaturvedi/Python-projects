@@ -1,0 +1,20 @@
+pizza
+subway
+chipotle
+burrito
+hamburger
+cheeseburger
+salad
+sandwich
+chicken
+turkey
+ham
+fish
+sushi
+noodles
+taco
+shrimp fry
+chicken nuggets
+pasta
+spaghetti
+buffalo wing
