@@ -2,53 +2,52 @@ import turtle
 screen = turtle.Screen()
 screen.screensize(400, 400)
 screen.setworldcoordinates(0, 0, 400, 400)
-pointer = turtle.Turtle()
-pointer.color("red")
-pointer.up()
-pointer.hideturtle()
-pointer.speed(0)
-def drawRect(x, y, length, height):
-    pointer.up()
-    pointer.goto(x,y)
-    pointer.begin_fill()
-    pointer.down()
-    pointer.goto(x + length, y)
-    pointer.goto(x + length, y + height)
-    pointer.goto(x, y + height)
-    pointer.goto(x, y)
-    pointer.up()
-    pointer.end_fill()
-def drawRectinverse(x, y, length, height):
-    pointer.up()
-    pointer.goto(x,y)
-    pointer.begin_fill()
-    pointer.down()
-    pointer.goto(x + height+length, y)
-    pointer.goto(x + length+height, y + height-length)
-    pointer.goto(x, y+length+height)
-    pointer.goto(x, y)
-    pointer.up()
-    pointer.end_fill()
+drawer = turtle.Turtle()
+drawer.color("red")
+drawer.up()
+drawer.hideturtle()
+drawer.speed(0)
+def drawRectangle(x, y, length, height):
+    drawer.up()
+    drawer.goto(x,y)
+    drawer.begin_fill()
+    drawer.down()
+    drawer.goto(x + length, y)
+    drawer.goto(x + length, y + height)
+    drawer.goto(x, y + height)
+    drawer.goto(x, y)
+    drawer.up()
+    drawer.end_fill()
+def drawRectangleInverse(x, y, length, height):
+    drawer.up()
+    drawer.goto(x,y)
+    drawer.begin_fill()
+    drawer.down()
+    drawer.goto(x + height+length, y)
+    drawer.goto(x + length+height, y + height-length)
+    drawer.goto(x, y+length+height)
+    drawer.goto(x, y)
+    drawer.up()
+    drawer.end_fill()
 def drawCoolWall(rows, cols, brickwidth, brickHeight, mortarWidth):
-    #no real pattern, was just having fun with the rectangle shaped and liked it, so i used it as my fancy brick wall pattern
     y = brickHeight
     brickWidth_offset = brickWidth+(mortarWidth/2)-(0.5*brickWidth) - mortarWidth
     for s in range(rows):
         if s%2==0:
             x = 0
             for i in range(cols):
-                drawRectinverse(x, y, brickWidth, brickHeight)
+                drawRectangleInverse(x, y, brickWidth, brickHeight)
                 x += (brickWidth + mortarWidth)
         else:
             x = brickWidth+(mortarWidth/2)-(0.5*brickWidth)
             for i in range(cols):
                 if i==cols-1:
-                    drawRectinverse(x, y, brickWidth_offset, brickHeight)
+                    drawRectangleInverse(x, y, brickWidth_offset, brickHeight)
                 else:
-                    drawRectinverse(x, y, brickWidth, brickHeight)
+                    drawRectangleInverse(x, y, brickWidth, brickHeight)
                     x += (brickWidth + mortarWidth)
             x=0
-            drawRectinverse(x, y, brickWidth_offset, brickHeight)
+            drawRectangleInverse(x, y, brickWidth_offset, brickHeight)
         y += (brickHeight + mortarWidth) + brickHeight
     pass
 def drawBrickWallOffset(rows, cols, brickWidth, brickHeight, mortarWidth):
@@ -58,18 +57,18 @@ def drawBrickWallOffset(rows, cols, brickWidth, brickHeight, mortarWidth):
         if s%2==0:
             x = 0
             for i in range(cols):
-                drawRect(x, y, brickWidth, brickHeight)
+                drawRectangle(x, y, brickWidth, brickHeight)
                 x += (brickWidth + mortarWidth)
         else:
             x = brickWidth+(mortarWidth/2)-(0.5*brickWidth)
             for i in range(cols):
                 if i==cols-1:
-                    drawRect(x, y, brickWidth_offset, brickHeight)     
+                    drawRectangle(x, y, brickWidth_offset, brickHeight)     
                 else:
-                    drawRect(x, y, brickWidth, brickHeight)
+                    drawRectangle(x, y, brickWidth, brickHeight)
                     x += (brickWidth + mortarWidth)
             x=0
-            drawRect(x, y, brickWidth_offset, brickHeight)
+            drawRectangle(x, y, brickWidth_offset, brickHeight)
         y += (brickHeight + mortarWidth)
     pass
 def drawBrickWall(rows, cols, brickWidth, brickHeight, mortarWidth):
@@ -77,7 +76,7 @@ def drawBrickWall(rows, cols, brickWidth, brickHeight, mortarWidth):
     for s in range(rows):
         x = 0
         for i in range(cols):
-            drawRect(x, y, brickWidth, brickHeight)
+            drawRectangle(x, y, brickWidth, brickHeight)
             x += (brickWidth + mortarWidth)
         y += (brickHeight + mortarWidth)
     pass

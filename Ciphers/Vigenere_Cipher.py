@@ -1,7 +1,7 @@
 import os
 os.system('cls')
 code = True
-while code == True:
+while code:
     name = input('What is your name: ')
     print('Hello ' + name + ', hope you are having a great day!!')
     choose = input('Which one would you like to do first?\n1 = Encrypt\n2 = Decrypt\nQ = Quit\nChoice: ')

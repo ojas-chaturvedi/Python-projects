@@ -12,46 +12,46 @@ def choose_function():
     return choose
 def encrpyt_function():
     word = input("Enter a message: ")
-    word_list = list(word)
-    encrypt_word = []
+    wordList = list(word)
+    encryptWord = []
     def printencrypt():
-        print('Your encrypted word is: ' + ''.join(encrypt_word))
+        print('Your encrypted word is: ' + ''.join(encryptWord))
     shift = int(input("Enter a shift: "))
-    for i in range(len(word_list)):
-        letter = word_list[i]
+    for i in range(len(wordList)):
+        letter = wordList[i]
         if letter.islower():
             cletter = chr((ord(letter) - ord("a") + shift) % 26 + ord("a"))
-            encrypt_word.append(cletter)
+            encryptWord.append(cletter)
         elif letter.isupper():
             cletter = chr((ord(letter) - ord("A") + shift) % 26 + ord("A"))
-            encrypt_word.append(cletter)
+            encryptWord.append(cletter)
         else:
             cletter = letter
-            encrypt_word.append(cletter)
+            encryptWord.append(cletter)
     printencrypt()
 def decrypt_caesar():
     word = input("Enter a encrypted word: ")
-    word_list = list(word)
+    wordList = list(word)
     shift = input("Enter a word in the message: ")
     decrypt = True
     while decrypt == True:
         for i in range(1,27):
-            decrypt_word = []
-            shift_number = i
-            for s in range(len(word_list)):
-                letter = word_list[s]
+            decryptWord = []
+            shiftNumber = i
+            for s in range(len(wordList)):
+                letter = wordList[s]
                 if letter.islower():
-                    cletter = chr((ord(letter) - ord("a") - shift_number) % 26 + ord("a"))
-                    decrypt_word.append(cletter)
+                    cletter = chr((ord(letter) - ord("a") - shiftNumber) % 26 + ord("a"))
+                    decryptWord.append(cletter)
                 elif letter.isupper():
-                    cletter = chr((ord(letter) - ord("A") - shift_number) % 26 + ord("A"))
-                    decrypt_word.append(cletter)
+                    cletter = chr((ord(letter) - ord("A") - shiftNumber) % 26 + ord("A"))
+                    decryptWord.append(cletter)
                 else:
                     cletter = letter
-                    decrypt_word.append(cletter)
-            check = ''.join(decrypt_word)
+                    decryptWord.append(cletter)
+            check = ''.join(decryptWord)
             if shift in check:
-                print('Your decrypted message is: ' + ''.join(decrypt_word))
+                print('Your decrypted message is: ' + ''.join(decryptWord))
                 decrypt = False
 while choice == True:
     name = input('What is your name: ')
