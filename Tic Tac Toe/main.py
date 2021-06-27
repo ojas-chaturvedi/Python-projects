@@ -64,33 +64,8 @@ def fillarray (a,b):
 def clickFunc(x,y):
     clicking = True
     while clicking == True:
-        if 1.1<x<1.9 and 1.1<y<1.9:
-            fillarray(1,1)
-            clicking = click
-        elif 0.1<x<0.9 and 0.1<y<0.9:
-            fillarray(0,0)
-            clicking = click
-        elif 1.1<x<1.9 and 0.1<y<0.9:
-            fillarray(1,0)
-            clicking = click
-        elif 2.1<x<2.9 and 0.1<y<0.9:
-            fillarray(2,0)
-            clicking = click
-        elif 0.1<x<0.9 and 1.1<y<1.9:
-            fillarray(0,1)
-            clicking = click
-        elif 2.1<x<2.9 and 1.1<y<1.9:
-            fillarray(2,1)
-            clicking = click
-        elif 0.1<x<0.9 and 2.1<y<2.9:
-            fillarray(0,2)
-            clicking = click
-        elif 1.1<x<1.9 and 2.1<y<2.9:
-            fillarray(1,2)
-            clicking = click
-        elif 2.1<x<2.9 and 2.1<y<2.9:
-            fillarray(2,2)
-            clicking = click
+        fillarray(int(x), int(y))
+        clicking = click
     detectWin()
 
 #handle turn
