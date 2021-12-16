@@ -309,7 +309,6 @@ def hangman_game_cool():
             turtle.right(1)
             turtle.fd(0.5)
         turtle.left(90)
-        ()
     def hangman_turtle_body1():
         turtle.fd(25)
         
