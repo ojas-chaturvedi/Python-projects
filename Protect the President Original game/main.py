@@ -1,0 +1,31 @@
+import os
+import winsound
+import turtle
+import time
+winsound.PlaySound("music.wav", winsound.SND_ASYNC)
+
+turtle.register_shape("president.gif")
+screen = turtle.Screen()
+screen.title("Protect the President by Ojas Chaturvedi")
+screen.setup(1200, 800)
+screen.bgpic("flag.gif")
+president = turtle.Turtle()
+president.shape("president.gif")
+writer = turtle.Turtle()
+writer.penup()
+writer.speed(0)
+writer.hideturtle()
+writer.pendown()
+writer.write("Protect the President!", align='center', font=('Courier', 40, "underline", "bold"))
+print("Rules for the game and how to play:\n")
+print("Control the shooter using the WASD keys")
+print("Shoot the aliens in the middle of their chests using the space key")
+print("Make sure that the alien does not reach the end of the screen")
+print("\nPowerups:\n")
+print("Level 2: Use the Q key to put a wall in front of you, which will hold of the aliens for some time")
+print("Level 3: wall and use the E key to call forth an army that pushes the aliens back by a big amount")
+print("Level 4: wall, army, and deploy a nuke that wipes the aliens off the face of the earth\n")
+print(f"Started: {time.strftime('%X')}")
+time.sleep(3)
+screen.bye()
+os.system("python Level1.py")
