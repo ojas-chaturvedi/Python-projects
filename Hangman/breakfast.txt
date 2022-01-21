@@ -1,0 +1,10 @@
+cereal
+banana
+pancakes
+waffles
+eggs
+toast
+ham
+oatmeal
+muffins
+milk

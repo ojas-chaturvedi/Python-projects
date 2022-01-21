@@ -1,0 +1,50 @@
+blue
+red
+green
+yellow
+orange
+purple
+grey
+black
+white
+maroon
+brown
+violet
+turquoise
+light blue
+lime green
+gold
+silver
+bronze
+hazel
+pink
+almond
+amber
+aqua
+ash grey
+auburn
+azure
+blond
+bright green
+brigh lavender
+lavender
+bubble gum
+candy apple red
+carrot orange
+cherry blossom pink
+chocolate
+cobalt
+coffee
+copper
+cotton candy
+crimson
+emerald
+forest green
+hot pink
+jade
+ivory
+jasmine
+magenta
+mint
+mustard
+peach

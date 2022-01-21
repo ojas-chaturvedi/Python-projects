@@ -1,0 +1,20 @@
+soccer
+basketball
+football
+tug of war
+cricket
+archery
+hockey
+ice hockey
+gymnastics
+baseball
+golf
+polo
+volleyball
+wrestling
+bowling
+boxing
+sprint
+long jump
+javelin
+discus
